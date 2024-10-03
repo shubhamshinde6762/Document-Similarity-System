@@ -8,6 +8,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import string
+from flask_cors import CORS
 
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -327,4 +328,5 @@ def update_document(doc_id):
         return jsonify({"error": "Database connection failed"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+    CORS(app)

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PlusIcon, SearchIcon, PencilIcon, TrashIcon } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://192.168.205.33:5000';
 
 const Database = () => {
   const [title, setTitle] = useState('');
